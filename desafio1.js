@@ -1,14 +1,18 @@
 //DEFINICIÓN DE VARIABLES
-let tasa;
-var primaTecnica;
-var costoIva;
-var costoIvaAdicional;
-var costoRf;
-var costoIibb;
-var premioFinal;
+var metros,
+  tasa,
+  tasaConPlan,
+  primaTecnica,
+  costoIva,
+  costoIvaAdicional,
+  costoRf,
+  costoIibb,
+  capital,
+  premioFinal;
+
+let nombre, descripcion, coberturaSeleccionada;
 
 //FUNCIONES
-
 var bienvenida = function () {
   alert(
     "Los datos son correctos!!!, Bienvenido al cotizador de Integral de Comercio (Cobertura de Incendio) -->  By INSURANCE TECH"
@@ -16,10 +20,23 @@ var bienvenida = function () {
 };
 
 //Funciones - CÁLCULOS
+function tasaPlan(tasa, planSeleccionado) {
+  var tasas;
 
-function prima(tasa, capital) {
+  if (planSeleccionado == 1) {
+    tasas = tasa * 1;
+  }
+  if (planSeleccionado == 2) {
+    tasas = tasa * 2;
+  } else {
+    tasas = tasa * 4;
+  }
+  return tasas;
+}
+
+function prima(tasaFinal, capital) {
   var primaCalculo;
-  primaCalculo = (tasa * capital) / 1000;
+  primaCalculo = (tasaFinal * capital) / 1000;
   return primaCalculo;
 }
 
@@ -54,8 +71,36 @@ function premio(primaTecnica, costoIva, costoIvaAdicional, costoRf, costoIibb) {
   return premioCalculo;
 }
 
-//PREGUNTAS DE SEGURIDAD PARA EL INGRESO
+// COBERTURAS DISPONIBLES
+class Planes {
+  constructor(nombre, descripcion) {
+    this.nombre = nombre.toUpperCase();
+    this.descripcion = descripcion;
+  }
+}
 
+const responsabilidadCivil = new Planes("SOLO RC", "Daños ocasionados a 3eros");
+
+const totalTotal = new Planes(
+  "TODO TOTAL",
+  responsabilidadCivil.descripcion + " + Incendio Total"
+);
+
+const todoRiesgo = new Planes(
+  "TODO RIESGO",
+  totalTotal.descripcion + " + Incendio Parcial."
+);
+
+//LISTADO DE COBERTURAS
+const listaDePlanes = [todoRiesgo, totalTotal, responsabilidadCivil];
+
+//contidad de planes
+console.log(listaDePlanes.length);
+
+//planes disponibles
+console.log(listaDePlanes);
+
+//PREGUNTAS DE SEGURIDAD PARA EL INGRESO
 for (let cont = 1; cont <= 3; cont++) {
   var contrasena = prompt("Resuelva el siguiente cálculo => 5+7");
 
@@ -63,8 +108,6 @@ for (let cont = 1; cont <= 3; cont++) {
     bienvenida();
 
     // SOLITUD DE INFORMACIÓN AL ASEGURADO
-    var metros = "";
-
     do {
       metros = parseInt(
         prompt(
@@ -76,7 +119,7 @@ for (let cont = 1; cont <= 3; cont++) {
       }
     } while (!(metros >= 20 && metros <= 300));
 
-    if (metros > 0 && metros <= 200) {
+    if (metros > 0 && metros <= 300) {
       //DEFINICIÓN DE TASAS
       if (metros > 0 && metros <= 50) {
         tasa = 2;
@@ -84,24 +127,86 @@ for (let cont = 1; cont <= 3; cont++) {
         tasa = 3;
       } else if (metros > 100 && metros <= 200) {
         tasa = 5;
+      } else if (metros > 200 && metros <= 300) {
+        tasa = 7;
       }
-
-      var capital = "";
 
       do {
         capital = parseInt(
           prompt(
-            "Ingrese el capital que desea asegurar con la cobertura de incendio. Mínimo $500.000"
+            "Ingrese el capital que desea asegurar con la cobertura de incendio. Mínimo $100.000"
           )
         );
         if (isNaN(capital)) {
           alert("Solo debe incluir números");
         }
-      } while (!(capital >= 20));
+      } while (!(capital >= 100000 || capital == 20));
+
+      // DESCRIPCIÓN DE LOS PLANES
+
+      // const opciones = [1, 2, 3];
+
+      // for (let i = 0; i < opciones.length; i++) {
+      //   if (i == 0) {
+      //     alert("PLAN" + opciones[i] + ": " + responsabilidadCivil.descripcion);
+      //   }
+      //   if (i == 1) {
+      //     alert("PLAN" + opciones[i] + ": " + totalTotal.descripcion);
+      //   } else {
+      //     alert("PLAN" + opciones[i] + ": " + todoRiesgo.descripcion);
+      //   }
+      // }
+
+      //SELECCIÓN DE PLAN
+      do {
+        planSeleccionado = parseInt(
+          prompt(
+            "Seleccione el plan que desea contratar ==> 1. SOLO RC || 2. TODO TOTAL || 3. TODO RIESGO"
+          )
+        );
+        if (isNaN(capital)) {
+          alert("Solo debe incluir números");
+        }
+      } while (
+        !(
+          planSeleccionado == 1 ||
+          planSeleccionado == 2 ||
+          planSeleccionado == 3
+        )
+      );
+
+      if (planSeleccionado == 1) {
+        coberturaSeleccionada = "SOLO RC";
+        alert(
+          "El plan seleccionado es: " +
+            responsabilidadCivil.nombre +
+            " y posee las siguientes coberturas: " +
+            responsabilidadCivil.descripcion
+        );
+      }
+      if (planSeleccionado == 2) {
+        coberturaSeleccionada = "TODO TOTAL";
+        alert(
+          "El plan seleccionado es: " +
+            totalTotal.nombre +
+            " y posee las siguientes coberturas: " +
+            totalTotal.descripcion
+        );
+      } else {
+        coberturaSeleccionada = "TODO RIESGO";
+        alert(
+          "El plan seleccionado es: " +
+            todoRiesgo.nombre +
+            " y posee las siguientes coberturas: " +
+            todoRiesgo.descripcion
+        );
+      }
+
+      //DEFINICIÓN DE TASA SEGÚN EL PLAN SELECCIONADO
+      tasaFinal = tasaPlan(tasa, planSeleccionado);
 
       //DESGLOSE DE COSTOS
-
-      primaTecnica = prima(tasa, capital);
+      primaTecnica = prima(tasaFinal, capital);
 
       costoIva = iva(primaTecnica);
 
@@ -119,26 +224,22 @@ for (let cont = 1; cont <= 3; cont++) {
         costoIibb
       );
 
-      //RESUMEN DE LA COBERTURA PARA EL CLIENTE
+      //RESUMEN DE COSTOS DE LA COBERTURA SELECCIONADA
 
       alert(
-        `El costo final de la póliza para su comercio de ${metros.toFixed(
+        `El costo de la cobertura ${coberturaSeleccionada} para su comercio de ${metros.toFixed(
           2
         )} metros cuadrados y capital asegurado de $ ${capital.toFixed(
           2
         )}, será de: $ ${premioFinal.toFixed(2)} por mes`
       );
 
-      console.log(`Desglose de costos =>  `);
-      console.log(`Prima Técnica: $ ${primaTecnica}`);
-      console.log(`+ IVA: $ ${costoIva}`);
-      console.log(`+ IVA Adicional: $ ${costoIvaAdicional}`);
-      console.log(`+ RF: $ ${costoRf}`);
-      console.log(`+ IIBB: $ ${costoIibb}`);
-      console.log(`Premio Final: $ ${premioFinal}`);
+      console.log(
+        `Desglose de costos mensual => Prima Técnica: $ ${primaTecnica} + IVA: $ ${costoIva} + IVA Adicional: $ ${costoIvaAdicional} + RF: $ ${costoRf} + IIBB: $ ${costoIibb} ======> Premio Final: $ ${premioFinal}`
+      );
 
       alert(
-        `Desglose de costos => Prima Técnica: $ ${primaTecnica.toFixed(
+        `Desglose de costos mensual => Prima Técnica: $ ${primaTecnica.toFixed(
           2
         )} + IVA: $ ${costoIva.toFixed(
           2
