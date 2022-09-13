@@ -142,27 +142,19 @@ for (let cont = 1; cont <= 3; cont++) {
         }
       } while (!(capital >= 100000 || capital == 20));
 
-      // DESCRIPCIÓN DE LOS PLANES
+      //DESCRIPCIÓN DE LOS PLANES
 
-      // const opciones = [1, 2, 3];
-
-      // for (let i = 0; i < opciones.length; i++) {
-      //   if (i == 0) {
-      //     alert("PLAN" + opciones[i] + ": " + responsabilidadCivil.descripcion);
-      //   }
-      //   if (i == 1) {
-      //     alert("PLAN" + opciones[i] + ": " + totalTotal.descripcion);
-      //   } else {
-      //     alert("PLAN" + opciones[i] + ": " + todoRiesgo.descripcion);
-      //   }
-      // }
+      const opciones = [
+        "1. Responsabilidad Civil",
+        " 2. Todo Total",
+        " 3. Todo Riesgo",
+      ];
+      console.log(opciones);
 
       //SELECCIÓN DE PLAN
       do {
         planSeleccionado = parseInt(
-          prompt(
-            "Seleccione el plan que desea contratar ==> 1. SOLO RC || 2. TODO TOTAL || 3. TODO RIESGO"
-          )
+          prompt("Seleccione el plan que desea contratar ==>" + opciones)
         );
         if (isNaN(capital)) {
           alert("Solo debe incluir números");
