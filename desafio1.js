@@ -145,10 +145,17 @@ for (let cont = 1; cont <= 3; cont++) {
       //DESCRIPCIÓN DE LOS PLANES
 
       const opciones = [
-        "1. Responsabilidad Civil",
+        " 1. Responsabilidad Civil",
         " 2. Todo Total",
         " 3. Todo Riesgo",
       ];
+
+      for (let i = 0; i < opciones.length; i++) {
+        console.log(`Los planes disponibles son: ${opciones[i]}`);
+        //const element = array[index];
+      }
+
+      opciones.push(" ( Asistencia Médica GRATIS! ) ");
       console.log(opciones);
 
       //SELECCIÓN DE PLAN
