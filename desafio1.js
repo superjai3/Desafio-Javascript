@@ -1,5 +1,5 @@
-//DEFINICIÓN DE VARIABLES
-var metros,
+//DEFINICIÓN DE VARIABLESlet
+let metros,
   tasa,
   tasaConPlan,
   primaTecnica,
@@ -8,20 +8,22 @@ var metros,
   costoRf,
   costoIibb,
   capital,
-  premioFinal;
-
-let nombre, descripcion, coberturaSeleccionada;
+  premioFinal,
+  nombre,
+  descripcion,
+  coberturaSeleccionada;
 
 //FUNCIONES
-var bienvenida = function () {
+let bienvenida = function () {
   alert(
     "Los datos son correctos!!!, Bienvenido al cotizador de Integral de Comercio (Cobertura de Incendio) -->  By INSURANCE TECH"
   );
 };
 
 //Funciones - CÁLCULOS
+
 function tasaPlan(tasa, planSeleccionado) {
-  var tasas;
+  let tasas;
 
   if (planSeleccionado == 1) {
     tasas = tasa * 1;
@@ -35,37 +37,37 @@ function tasaPlan(tasa, planSeleccionado) {
 }
 
 function prima(tasaFinal, capital) {
-  var primaCalculo;
+  let primaCalculo;
   primaCalculo = (tasaFinal * capital) / 1000;
   return primaCalculo;
 }
 
 function iva(primaTecnica) {
-  var ivaCalculo;
+  let ivaCalculo;
   ivaCalculo = 0.21 * primaTecnica;
   return ivaCalculo;
 }
 
 function ivaAdicional(primaTecnica) {
-  var ivaAdicionalCalculo;
+  let ivaAdicionalCalculo;
   ivaAdicionalCalculo = 0.03 * primaTecnica;
   return ivaAdicionalCalculo;
 }
 
 function rf(primaTecnica) {
-  var rfCalculo;
+  let rfCalculo;
   rfCalculo = 0.07 * primaTecnica;
   return rfCalculo;
 }
 
 function iibb(primaTecnica) {
-  var iibbCalculo;
+  let iibbCalculo;
   iibbCalculo = 0.06 * primaTecnica;
   return iibbCalculo;
 }
 
 function premio(primaTecnica, costoIva, costoIvaAdicional, costoRf, costoIibb) {
-  var premioCalculo;
+  let premioCalculo;
   premioCalculo =
     primaTecnica + costoIva + costoIvaAdicional + costoRf + costoIibb;
   return premioCalculo;
@@ -73,26 +75,55 @@ function premio(primaTecnica, costoIva, costoIvaAdicional, costoRf, costoIibb) {
 
 // COBERTURAS DISPONIBLES
 class Planes {
-  constructor(nombre, descripcion) {
+  constructor(id, nombre, descripcion, gratis) {
+    this.id = id;
     this.nombre = nombre.toUpperCase();
     this.descripcion = descripcion;
+    this.gratis = gratis;
+  }
+  verificar() {
+    console.log(`El id del pruducto: ${this.id}`);
   }
 }
 
-const responsabilidadCivil = new Planes("SOLO RC", "Daños ocasionados a 3eros");
+const responsabilidadCivil = new Planes(
+  1,
+  "SOLO RC",
+  "Daños ocasionados a 3eros"
+);
 
 const totalTotal = new Planes(
+  2,
   "TODO TOTAL",
-  responsabilidadCivil.descripcion + " + Incendio Total"
+  responsabilidadCivil.descripcion + " + Incendio Total",
+  "Telemedicina Gratis"
 );
 
 const todoRiesgo = new Planes(
+  3,
   "TODO RIESGO",
-  totalTotal.descripcion + " + Incendio Parcial."
+  totalTotal.descripcion + " + Incendio Parcial.",
+  "Telemedicina Gratis"
 );
 
+// function mostrarProductos(array) {
+//   alert("En la consola se pueden ver los Planes")
+//   console.log("Verifique los productos");
+//   array.forEach(function (Planes) {
+//     Planes.metros();
+//   });
+
 //LISTADO DE COBERTURAS
-const listaDePlanes = [todoRiesgo, totalTotal, responsabilidadCivil];
+let listaDePlanes = [todoRiesgo, totalTotal, responsabilidadCivil, Planes];
+
+//METODO DE BUSQUEDA
+let incluyeRc = listaDePlanes.includes(responsabilidadCivil, 0);
+console.log(incluyeRc);
+
+//METODO DE FILTRADO
+let incluyeTr = listaDePlanes.filter((element) => element > todoRiesgo);
+
+console.log(incluyeTr);
 
 //contidad de planes
 console.log(listaDePlanes.length);
@@ -100,9 +131,34 @@ console.log(listaDePlanes.length);
 //planes disponibles
 console.log(listaDePlanes);
 
+// //Función buscar
+// function buscarPorId() {
+//   let buscarProducto = prompt("Ingrese el ID del Producto");
+//   let idEncontrado = listaDePlanes.find(
+//     (Planes) => Planes.id === buscarProducto
+//   );
+//   if (idEncontrado === undefined) {
+//     alert(
+//       "No existe la cobertura solicitada. Usar alguna de estas opciones: 1.RC, 2.TT, 3.TR"
+//     );
+//   } else {
+//     aler(idEncontrado.premioFinal);
+//   }
+// }
+
+//filtrar
+let estaPlan = listaDePlanes.filter((Element) => Element == "riesgo");
+console.log(estaPlan.length);
+
+//DESCRIPCIÓN DE LAS COBERTURAS
+
+let responsabilidadCivilDescripcion = {
+  contraTerceros: 25000000,
+};
+
 //PREGUNTAS DE SEGURIDAD PARA EL INGRESO
 for (let cont = 1; cont <= 3; cont++) {
-  var contrasena = prompt("Resuelva el siguiente cálculo => 5+7");
+  let contrasena = prompt("Resuelva el siguiente cálculo => 5+7");
 
   if (contrasena == "12") {
     bienvenida();
@@ -142,7 +198,7 @@ for (let cont = 1; cont <= 3; cont++) {
         }
       } while (!(capital >= 100000 || capital == 20));
 
-      //DESCRIPCIÓN DE LOS PLANES
+      //OPCIONES DE PLANES
 
       const opciones = [
         " 1. Responsabilidad Civil",
