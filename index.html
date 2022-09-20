@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Algoritmo utilizando un ciclo</title>
-    <script src="desafio1.js"></script>
+    <title>Proyecto Javascript</title>
+
     <link rel="stylesheet" href="style.css" />
     <!--GOOGLE FONTS-->
       <link
@@ -22,9 +22,7 @@
     <title>Proyecto Coder House</title>
   </head>
 
-
-  <body>
-    
+<body>    
 
 <!--HEADER-->
 <header>
@@ -34,8 +32,8 @@
     <button class="nav-toggle" aria-label="abrir navegacion">
       <span class="hamburger"></span>
     </button>
-    <a href="" class="logo">
-      <img class="imagen"  src="/Imagenes/kisspng-logo-export-cargo-freight-forwarding-agency-intern-globe-icon-clip-art-at-clker-com-vector-clip-art-o-5ab07d17e10278.7990235415215157999217.png" alt="logo" />
+    <a href="index.html" class="logo">
+      <img class="imagen"  src="/Imagenes/kisspng-logo-export-cargo-freight-forwarding-agency-intern-globe-icon-clip-art-at-clker-com-vector-clip-art-o-5ab07d17e10278.7990235415215157999217.png" alt="logo"  />
     </a>
     <nav class="nav">
       <ul class="nav__list nav__list--primary">
@@ -71,16 +69,19 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1 class="display-2">
-          <span class="display-2--intro">    CODER HOUSE
+        <h1   class="display-2">
+          <span  class="display-2--intro">    INSURANCE TECH
           </span>
-          <span class="display-2--description">
+          <br>
+          <span class="display-2--description texto">
+            <brstrong>Quienes Somos</brstrong>
             <br>
-
-            <strong> HOME </strong> -   Nuevo Cotizador de Integral de Comercio (Cobertura de Incendio)
-
-
+            <br>
+              <p id="texto">Somos una organización joven integrada por profesionales con amplia experiencia en seguros así como en la evaluación y administración de riesgos.</p>
+            <br>
+              <p id="texto">Nuestro propósito es comprender las necesidades de nuestros clientes y brindarles soluciones innovadoras.</p>
           </span>
+          
         </h1>
         <button class="nav__link--button">
           COTIZAR AHORA! <span><i class="fas fa-cloud-download-alt"></i></span>
@@ -105,18 +106,54 @@
   </svg>
 </section>
 <section class="download">
+
+  <div class="container">
+    <div class="col">
+      <H2 id ="titulo" class="download__title"> Integral de Comercio</H2>
+      <br>
+    <div>
+  </div>
+  
+  <br>
   <div class="container">
     <div class="row">
       <div class="col">
-        <h4 class="download__title"> Atención Personalizada </h4>
-        <div class="heading-line heading-line--download"></div>
+        <h3 class="download__title"> Planes disponibles </h3>
+        <br>
+        <ul id="listaPlanes">
+          <li class="planes">Plan Responsabilidad Civil</li>
+          <li class="planes">Plan Todo Total</li>
+          <li class="planes">Plan Todo Riesgo</li>
+        </ul>
       </div>
     </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="container">
     <div class="row">
       <div class="col">
+        <h3 class="download__title"> Ahorro Garantizado </h3>
+        <p class ="descuento">
+          Podes ahorrar entre un 10% y un 30% de lo que pagas actualmente. <strong> Cotiza con nosotros! </strong>
+        </p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col">
         <div class="download__logo-box">
+          <h4 id="subtituloServicio" class="download__title"> Atención las 24 Hrs</h4>
           <a
             href=""
             target="blank"
@@ -129,6 +166,8 @@
       </div>
       <div class="col">
         <div class="download__logo-box">
+          <h4 id="subtituloServicio" class="download__title"> Costo-Beneficio  </h4>
+
           <a href="" target="blank"
             ><img
               src="/Imagenes/Diseño sin título (1).png"
@@ -140,6 +179,8 @@
       </div>
       <div class="col">
         <div class="download__logo-box">
+          <h4 id="subtituloServicio" class="download__title"> Servicios de Urgencia! </h4>
+
           <a
             href=""
             target="blank"
@@ -169,5 +210,7 @@
     </div>
   </div>
 </div>
+
+<script src="desafio1.js"></script>
   </body>
 </html>
