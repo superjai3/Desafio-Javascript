@@ -322,3 +322,38 @@ for (let cont = 1; cont <= 3; cont++) {
     alert("Usaste tu " + cont + "° intento, inténtalo en otro momento.");
   }
 }
+
+let titulo = document.getElementById("titulo");
+console.log(titulo.innerText);
+titulo.innerText = "Póliza de Integral de Comercio";
+
+let planes = document.getElementsByClassName("planes");
+console.log(planes[0].innerText);
+console.log(planes[1].innerText);
+console.log(planes[2].innerText);
+
+let totalListaDePlanes = document.getElementById("listaPlanes");
+totalListaDePlanes.innerHTML += `<li class = "planes" >Plan Seguro Técnico</li>`;
+
+for (let cadaPlan of planes) {
+  console.log(cadaPlan);
+  cadaPlan.innerText += " + Serv. de Urgencia (GRATIS!)";
+}
+
+let elementosH4 = document.getElementsByTagName("h4");
+console.log(elementosH4);
+
+for (let h4 of elementosH4) {
+  console.log(h4.innerText);
+}
+
+let parrafo = document.querySelectorAll("#texto");
+console.log(parrafo);
+
+let robo = document.createElement("li");
+robo.innerText = "Robo de Valores en Tránsito";
+console.log(robo);
+
+document.body.append(robo);
+let listaPlanes = document.getElementById("listaPlanes");
+listaPlanes.append(robo);
