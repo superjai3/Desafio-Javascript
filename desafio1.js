@@ -75,10 +75,11 @@ function premio(primaTecnica, costoIva, costoIvaAdicional, costoRf, costoIibb) {
 
 // COBERTURAS DISPONIBLES
 class Planes {
-  constructor(id, nombre, descripcion, gratis) {
+  constructor(id, nombre, descripcion, imagen, gratis) {
     this.id = id;
     this.nombre = nombre.toUpperCase();
     this.descripcion = descripcion;
+    this.imagen = imagen;
     this.gratis = gratis;
   }
   verificar() {
@@ -106,13 +107,6 @@ const todoRiesgo = new Planes(
   "Telemedicina Gratis"
 );
 
-// function mostrarProductos(array) {
-//   alert("En la consola se pueden ver los Planes")
-//   console.log("Verifique los productos");
-//   array.forEach(function (Planes) {
-//     Planes.metros();
-//   });
-
 //LISTADO DE COBERTURAS
 let listaDePlanes = [todoRiesgo, totalTotal, responsabilidadCivil, Planes];
 
@@ -130,21 +124,6 @@ console.log(listaDePlanes.length);
 
 //planes disponibles
 console.log(listaDePlanes);
-
-// //Función buscar
-// function buscarPorId() {
-//   let buscarProducto = prompt("Ingrese el ID del Producto");
-//   let idEncontrado = listaDePlanes.find(
-//     (Planes) => Planes.id === buscarProducto
-//   );
-//   if (idEncontrado === undefined) {
-//     alert(
-//       "No existe la cobertura solicitada. Usar alguna de estas opciones: 1.RC, 2.TT, 3.TR"
-//     );
-//   } else {
-//     aler(idEncontrado.premioFinal);
-//   }
-// }
 
 //filtrar
 let estaPlan = listaDePlanes.filter((Element) => Element == "riesgo");
@@ -208,7 +187,6 @@ for (let cont = 1; cont <= 3; cont++) {
 
       for (let i = 0; i < opciones.length; i++) {
         console.log(`Los planes disponibles son: ${opciones[i]}`);
-        //const element = array[index];
       }
 
       opciones.push(" ( Asistencia Médica GRATIS! ) ");
@@ -323,7 +301,9 @@ for (let cont = 1; cont <= 3; cont++) {
   }
 }
 
-let titulo = document.getElementById("titulo");
+//DOM
+
+let = document.getElementById("titulo");
 console.log(titulo.innerText);
 titulo.innerText = "Póliza de Integral de Comercio";
 
@@ -357,3 +337,256 @@ console.log(robo);
 document.body.append(robo);
 let listaPlanes = document.getElementById("listaPlanes");
 listaPlanes.append(robo);
+
+const ofertaDeProductos = [];
+ofertaDeProductos.push(listaDePlanes);
+console.log(ofertaDeProductos);
+
+/*
+//Clase constuctora
+class Seguros {
+  constructor(item, ramo, detalle, beneficio, imagen) {
+    //propiedades o atributos de nuestra clase
+    (this.id = item),
+      (this.ramo = ramo),
+      (this.detalle = detalle),
+      (this.beneficio = beneficio),
+      (this.imagen = imagen);
+  }
+  //métodos
+  mostrarData() {
+    console.log(
+      `El seguro es el ${this.id} ${this.ramo}, que cubre: ${this.detalle}. Viene acompañado del siguiente beneficio: es ${this.beneficio}`
+    );
+  }
+}
+
+//OBJETOS
+const seguro1 = new Seguros(
+  1,
+  "Responsabilidad Civil",
+  "Cubre daños a terceros causados por el mantenimiento de predios y por el desarrollo de las labores y operaciones relacionadas directamente con su actividad económica.",
+  "Telemedicina Gratis",
+  "responsabilidadcivil.jpg"
+);
+
+const seguro2 = new Seguros(
+  2,
+  "Todo Total",
+  "Cubre la RC contra 3eros, pero también se cubre Incendio Total, Daño Total, Robo Total.",
+  "Telemedicina Gratis",
+  "todototal.jpg"
+);
+
+const seguro3 = new Seguros(
+  3,
+  "Todo Riesgo",
+  "Cubre la RC, plan Todo Total y también se cubre Incendio Parcial, Daño Parcial, Robo Parcial.",
+  "Telemedicina Gratis",
+  "todoriesgo.jpeg"
+);
+
+const seguro4 = new Seguros(
+  4,
+  "Seguro Técnico",
+  "Cubre la RC, plan Todo Total y también se cubre Incendio Parcial, Daño Parcial, Robo Parcial.",
+  "Telemedicina Gratis",
+  "segurotecnico.jpg"
+);
+
+const seguro5 = new Seguros(
+  5,
+  "Robo de Valores en Tránsito",
+  "Cubre la RC, plan Todo Total y también se cubre Incendio Parcial, Daño Parcial, Robo Parcial.",
+  "Telemedicina Gratis",
+  "robodevalores.jpg"
+);
+
+const oferta = [];
+oferta.push(seguro1, seguro2, seguro3, seguro4, seguro5);
+
+//CARDS
+let divProductos = document.getElementById("productos");
+
+function mostrarOferta(oferta) {
+  divProductos.innerHTML = "";
+
+  oferta.forEach(function (seguro) {
+    let nuevoProducto = document.createElement("div");
+
+    nuevoProducto.innerHTML = `<div id="${seguro.id}" class="card" style="width: 18rem;">
+                                    <img class="card-img-top" style="height: 250px;" src="" alt="${seguro.nombre} ">
+                                    <div class="card-body">
+                                        <h4 class="card-title">${seguro.nombre}</h4>
+                                        <p><strong> Descripción: </strong> ${seguro.descripcion}</p>
+                                        <p class="">ServAdicional: ${seguro.gratis}</p>
+                                        <button class="btn btn-outline-success btnComprar">Cotizar Aquí</button>
+                                    </div>
+        </div>`;
+    divProductos.append(nuevoProducto);
+  });
+
+  let btnCompra = document.getElementsByClassName("btnComprar");
+  for (let compra of btnCompra) {
+    compra.addEventListener("click", () => {
+      alert("El producto ha sido comprado");
+    });
+  }
+}
+*/
+
+//Clase constuctora
+class Libro {
+  constructor(id, autor, titulo, precio, imagen) {
+    //propiedades o atributos de nuestra clase
+    (this.id = id),
+      (this.autor = autor),
+      (this.titulo = titulo),
+      (this.precio = precio),
+      (this.imagen = imagen);
+  }
+  //métodos
+  mostrarData() {
+    console.log(
+      `El titulo es ${this.titulo}, el autor es ${this.autor} y su precio es ${this.precio}`
+    );
+  }
+}
+//Instanciación de objetos -- respetamos orden y cantidad de atributos
+
+const libro1 = new Libro(
+  1,
+  "Jorge Luis Borges",
+  "Aleph",
+  900,
+  "AlephBorges.jpg"
+);
+
+const libro2 = new Libro(
+  2,
+  "Gabriel García Marquez",
+  "Cien años de Soledad",
+  4500,
+  "CienSoledadMarquez.jpg"
+);
+
+const libro3 = new Libro(
+  3,
+  "Isabel Allende",
+  "Paula",
+  2800,
+  "PaulaAllende.jpg"
+);
+
+const libro4 = new Libro(
+  4,
+  "Jorge Luis Borges",
+  "Ficciones",
+  1400,
+  "FiccionesBorges.jpg"
+);
+
+const libro5 = new Libro(
+  5,
+  "Mario Benedetti",
+  "Andamios",
+  2200,
+  "AndamiosBenedetti.jpg"
+);
+
+const libro6 = new Libro(
+  6,
+  "Mario Vargas Llosa",
+  "La ciudad y los perros",
+  2000,
+  "CiudadPerrosVargasLlosa.jpg"
+);
+
+//Dos formas inicializar el array:
+const biblioteca = [libro1, libro2, libro3, libro4, libro5];
+// console.log(biblioteca)
+//Segunda forma
+const estanteria = [];
+estanteria.push(libro1, libro2, libro3, libro4, libro5, libro6);
+let divProductos = document.getElementById("productos");
+function mostrarCatalogo(array) {
+  divProductos.innerHTML = "";
+  array.forEach((libro) => {
+    let nuevoProducto = document.createElement("div");
+    nuevoProducto.innerHTML = `<div id="${libro.id}" class="card" style="width: 18rem;">
+                                    <img class="card-img-top" style="height: 250px;" src="assets/${libro.imagen}" alt="${libro.titulo} de ${libro.autor}">
+                                    <div class="card-body">
+                                        <h4 class="card-title">${libro.titulo}</h4>
+                                        <p>Autor: ${libro.autor}</p>
+                                        <p class="">Precio: ${libro.precio}</p>
+                                        <button class="btn btn-outline-success btnComprar">Agregar al carrito</button>
+                                    </div>
+        </div>`;
+    divProductos.append(nuevoProducto);
+  });
+  let btnCompra = document.getElementsByClassName("btnComprar");
+  for (let compra of btnCompra) {
+    compra.addEventListener("click", () => {
+      alert("El producto ha sido comprado");
+    });
+  }
+}
+
+// for(let compra of btnCompra){
+//     compra.addEventListener("click", ()=>{
+//         alert("El producto ha sido comprado")
+//     })
+// }
+
+function ocultarCatalogo() {
+  divProductos.innerHTML = "";
+}
+// //function agregar Libro
+function nuevoLibro(array) {
+  let autorIngresado = prompt("Ingrese el autor");
+  let tituloIngresado = prompt("Ingrese el titulo");
+  let precioIngresado = parseInt(prompt("Ingrese el precio"));
+  let libroCreado = new Libro(
+    estanteria.length + 1,
+    autorIngresado,
+    tituloIngresado,
+    precioIngresado
+  );
+  array.push(libroCreado);
+}
+
+//function nuevoLibro actualiza a inputs!
+function guardarLibro(array) {
+  let autorInput = document.getElementById("autorInput");
+  let tituloInput = document.getElementById("tituloInput");
+  let precioInput = document.getElementById("precioInput");
+  let libroCreado = new Libro(
+    array.length + 1,
+    autorInput.value,
+    tituloInput.value,
+    parseInt(precioInput.value),
+    "libroNuevo.jpg"
+  );
+  console.log(libroCreado);
+  array.push(libroCreado);
+  console.log(array);
+  //Provisorio resetear form
+  precioInput.value = "";
+  tituloInput.value = "";
+  autorInput.value = "";
+  mostrarCatalogo(array);
+}
+//btnGuardar adjuntamos evento
+let btnGuardar = document.getElementById("guardarLibroBtn");
+btnGuardar.addEventListener("click", () => {
+  guardarLibro(estanteria);
+});
+//BtnMostrarCatalogo adjuntamos evento
+let btnMostrarCatalogo = document.getElementById("verCatalogo");
+btnMostrarCatalogo.addEventListener("click", () => {
+  mostrarCatalogo(estanteria);
+});
+
+//btn ocultar adjuntamos evento
+let btnOcultarCatalogo = document.getElementById("ocultarCatalogo");
+btnOcultarCatalogo.onclick = ocultarCatalogo;

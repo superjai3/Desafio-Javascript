@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto Javascript</title>
-
     <link rel="stylesheet" href="style.css" />
+    <title>Proyecto Coder House</title>
+    
     <!--GOOGLE FONTS-->
       <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,600&display=swap"
@@ -19,11 +19,12 @@
       />
     <!--FAVICON-->
       <link rel="shortcut icon" href="/Imagenes/ico.png" type="image/x-icon" />
-    <title>Proyecto Coder House</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
   </head>
 
 <body>    
-
 <!--HEADER-->
 <header>
 <!--NAV BAR-->
@@ -32,9 +33,7 @@
     <button class="nav-toggle" aria-label="abrir navegacion">
       <span class="hamburger"></span>
     </button>
-    <a href="index.html" class="logo">
-      <img class="imagen"  src="/Imagenes/kisspng-logo-export-cargo-freight-forwarding-agency-intern-globe-icon-clip-art-at-clker-com-vector-clip-art-o-5ab07d17e10278.7990235415215157999217.png" alt="logo"  />
-    </a>
+  
     <nav class="nav">
       <ul class="nav__list nav__list--primary">
         <li class="nav__item">
@@ -52,11 +51,12 @@
         <li class="nav__item">
           <a class="nav__link" href="ayuda.html">AYUDA</a>
         </li>
+        
       </ul>
       <ul class="nav__list">
         <li class="nav__item">
-          <button class="nav__link--button">
-            COTIZAR AHORA! <span><i class="fas fa-download"></i></span>
+          <button class="nav__l">
+          DARK MODE <span><i class="fas fa-download"></i></span>
           </button>
         </li>
       </ul>
@@ -143,6 +143,54 @@
       </div>
     </div>
   </div>
+
+  <div>
+  <!-- Card Bootstrap-->
+    <div id="1" class="card" style="width: 50rem;">
+        <img class="card-img-top" style="height: 250px;"src="/Imagenes/seguro_de_comercio.png" alt="Seguro de Responsabilidad Civil">
+        <div class="card-body">
+            <h4 class="card-title">Principales Coberturas del Integral de Comercio</h4>
+            <p>Este seguro ofrece una combinación de coberturas que garantizan que tu negocio siga funcionando más allá de cualquier siniestro que te afecte económicamente. La amplia protección de este seguro resguarda tu comercio y te brinda cobertura por incendio, robo, responsabilidad civil a linderos, responsabilidad civil comprensiva, seguro técnico (incluyendo equipos electrónicos) y cristales.
+            </p>
+        </div>
+    </div> 
+  </div>
+
+
+<div>
+  <div id="productos" class="productosEstilos"></div>
+</div>
+
+  
+
+<br>
+<br>
+<br>
+
+
+
+<div class="container">
+  <div class="intro-section2">
+  <h2>PRUEBA NUESTRO CORIZADOR</h2>
+  <form>
+    <label for="titulo">Ingrese el nombre de la Cobertura que desea contrarar: </label><br>
+    <input type="text" id="tituloInput" name="titulo"><br>
+    <label for="autor">Ingrese metros cuadrados de su comercio: </label><br>
+    <input type="text" id="autorInput" name="autor"><br>
+    <label for="precio">Ingrese el capital asegurado que desea cubrir: </label><br>
+    <input type="text" id="precioInput" name="precio"><br>
+    <br>
+  </form>
+    <button id="guardarLibroBtn">Cotizar</button>
+    <br>
+    <br>
+    <button id="verCatalogo">Ver Beneficios</button>
+    <br>
+    <br>
+    <button id="ocultarCatalogo">Ocultar Beneficios</button>
+  </div>    
+</div>
+
   <br>
   <br>
   <br>
@@ -210,6 +258,8 @@
     </div>
   </div>
 </div>
+
+
 
 <script src="desafio1.js"></script>
   </body>
