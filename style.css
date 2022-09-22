@@ -58,7 +58,7 @@ header {
   visibility: hidden;
   height: 0;
   position: absolute;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .nav-toggle {
@@ -203,7 +203,13 @@ header {
 
 .intro-section {
   background: linear-gradient(to right, #55ae36, #88e169);
-  padding: 8rem 0 0 0;
+  padding: 4rem 0rem 0rem 0rem;
+  height: 100%;
+  width: 100%;
+}
+.intro-section2 {
+  background: linear-gradient(to right, #55ae36, #88e169);
+  padding: 2rem 2rem 2rem 20rem;
   height: 100%;
   width: 100%;
 }
@@ -295,7 +301,7 @@ header {
 }
 
 .footer-bottom__copyright a {
-  color: gray;
+  color: rgb(55, 159, 37);
   text-decoration: none;
 }
 
@@ -379,4 +385,21 @@ header {
 
 .github {
   text-decoration: #55ae36;
+}
+
+.darkMode {
+  color: antiquewhite;
+  background-color: black;
+}
+
+/*container Productos:*/
+.productosEstilos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card {
+  margin: 1rem auto;
+}
+
+.textTituloInput {
 }
