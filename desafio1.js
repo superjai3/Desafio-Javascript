@@ -343,23 +343,7 @@ ofertaDeProductos.push(listaDePlanes);
 console.log(ofertaDeProductos);
 
 /*
-//Clase constuctora
-class Seguros {
-  constructor(item, ramo, detalle, beneficio, imagen) {
-    //propiedades o atributos de nuestra clase
-    (this.id = item),
-      (this.ramo = ramo),
-      (this.detalle = detalle),
-      (this.beneficio = beneficio),
-      (this.imagen = imagen);
-  }
-  //métodos
-  mostrarData() {
-    console.log(
-      `El seguro es el ${this.id} ${this.ramo}, que cubre: ${this.detalle}. Viene acompañado del siguiente beneficio: es ${this.beneficio}`
-    );
-  }
-}
+
 
 //OBJETOS
 const seguro1 = new Seguros(
@@ -436,25 +420,27 @@ function mostrarOferta(oferta) {
 */
 
 //Clase constuctora
-class Libro {
-  constructor(id, autor, titulo, precio, imagen) {
+class Seguro {
+  constructor(item, ramo, detalle, beneficio, imagen) {
     //propiedades o atributos de nuestra clase
-    (this.id = id),
-      (this.autor = autor),
-      (this.titulo = titulo),
-      (this.precio = precio),
+    (this.item = item),
+      (this.ramo = ramo),
+      (this.detalle = detalle),
+      (this.beneficio = beneficio),
       (this.imagen = imagen);
   }
-  //métodos
+
+  //Métodos
   mostrarData() {
     console.log(
-      `El titulo es ${this.titulo}, el autor es ${this.autor} y su precio es ${this.precio}`
+      `El seguro es el ${this.item} ${this.ramo}, que cubre: ${this.detalle}. Viene acompañado del siguiente beneficio: es ${this.beneficio}`
     );
   }
 }
+
 //Instanciación de objetos -- respetamos orden y cantidad de atributos
 
-const libro1 = new Libro(
+const seguro1 = new Seguro(
   1,
   "Jorge Luis Borges",
   "Aleph",
@@ -462,7 +448,7 @@ const libro1 = new Libro(
   "AlephBorges.jpg"
 );
 
-const libro2 = new Libro(
+const seguro2 = new Seguro(
   2,
   "Gabriel García Marquez",
   "Cien años de Soledad",
@@ -470,7 +456,7 @@ const libro2 = new Libro(
   "CienSoledadMarquez.jpg"
 );
 
-const libro3 = new Libro(
+const seguro3 = new Seguro(
   3,
   "Isabel Allende",
   "Paula",
@@ -478,7 +464,7 @@ const libro3 = new Libro(
   "PaulaAllende.jpg"
 );
 
-const libro4 = new Libro(
+const seguro4 = new Seguro(
   4,
   "Jorge Luis Borges",
   "Ficciones",
@@ -486,7 +472,7 @@ const libro4 = new Libro(
   "FiccionesBorges.jpg"
 );
 
-const libro5 = new Libro(
+const seguro5 = new Seguro(
   5,
   "Mario Benedetti",
   "Andamios",
@@ -494,7 +480,7 @@ const libro5 = new Libro(
   "AndamiosBenedetti.jpg"
 );
 
-const libro6 = new Libro(
+const seguro6 = new Seguro(
   6,
   "Mario Vargas Llosa",
   "La ciudad y los perros",
@@ -503,22 +489,22 @@ const libro6 = new Libro(
 );
 
 //Dos formas inicializar el array:
-const biblioteca = [libro1, libro2, libro3, libro4, libro5];
+const biblioteca = [seguro1, seguro2, seguro3, seguro4, seguro5, seguro6];
 // console.log(biblioteca)
 //Segunda forma
 const estanteria = [];
-estanteria.push(libro1, libro2, libro3, libro4, libro5, libro6);
+estanteria.push(seguro1, seguro2, seguro3, seguro4, seguro5, seguro6);
 let divProductos = document.getElementById("productos");
 function mostrarCatalogo(array) {
   divProductos.innerHTML = "";
-  array.forEach((libro) => {
+  array.forEach((seguro) => {
     let nuevoProducto = document.createElement("div");
-    nuevoProducto.innerHTML = `<div id="${libro.id}" class="card" style="width: 18rem;">
-                                    <img class="card-img-top" style="height: 250px;" src="assets/${libro.imagen}" alt="${libro.titulo} de ${libro.autor}">
+    nuevoProducto.innerHTML = `<div id="${seguro.item}" class="card" style="width: 18rem;">
+                                    <img class="card-img-top" style="height: 250px;" src="assets/${seguro.imagen}" alt="${seguro.titulo} de ${seguro.ramo}">
                                     <div class="card-body">
-                                        <h4 class="card-title">${libro.titulo}</h4>
-                                        <p>Autor: ${libro.autor}</p>
-                                        <p class="">Precio: ${libro.precio}</p>
+                                        <h4 class="card-title">${seguro.titulo}</h4>
+                                        <p>Ramo: ${seguro.ramo}</p>
+                                        <p class="">Precio: ${seguro.precio}</p>
                                         <button class="btn btn-outline-success btnComprar">Agregar al carrito</button>
                                     </div>
         </div>`;
@@ -541,45 +527,44 @@ function mostrarCatalogo(array) {
 function ocultarCatalogo() {
   divProductos.innerHTML = "";
 }
-// //function agregar Libro
-function nuevoLibro(array) {
-  let autorIngresado = prompt("Ingrese el autor");
+function nuevoSeguro(array) {
+  let ramoIngresado = prompt("Ingrese el ramo");
   let tituloIngresado = prompt("Ingrese el titulo");
   let precioIngresado = parseInt(prompt("Ingrese el precio"));
-  let libroCreado = new Libro(
+  let seguroCreado = new Seguro(
     estanteria.length + 1,
-    autorIngresado,
+    ramoIngresado,
     tituloIngresado,
     precioIngresado
   );
-  array.push(libroCreado);
+  array.push(seguroCreado);
 }
 
-//function nuevoLibro actualiza a inputs!
-function guardarLibro(array) {
-  let autorInput = document.getElementById("autorInput");
+//function nuevoSeguro actualiza a inputs!
+function guardarSeguro(array) {
+  let ramoInput = document.getElementById("ramoInput");
   let tituloInput = document.getElementById("tituloInput");
   let precioInput = document.getElementById("precioInput");
-  let libroCreado = new Libro(
+  let seguroCreado = new Seguro(
     array.length + 1,
-    autorInput.value,
+    ramoInput.value,
     tituloInput.value,
     parseInt(precioInput.value),
-    "libroNuevo.jpg"
+    "seguroNuevo.jpg"
   );
-  console.log(libroCreado);
-  array.push(libroCreado);
+  console.log(seguroCreado);
+  array.push(seguroCreado);
   console.log(array);
   //Provisorio resetear form
   precioInput.value = "";
   tituloInput.value = "";
-  autorInput.value = "";
+  ramoInput.value = "";
   mostrarCatalogo(array);
 }
 //btnGuardar adjuntamos evento
-let btnGuardar = document.getElementById("guardarLibroBtn");
+let btnGuardar = document.getElementById("guardarSeguroBtn");
 btnGuardar.addEventListener("click", () => {
-  guardarLibro(estanteria);
+  guardarSeguro(estanteria);
 });
 //BtnMostrarCatalogo adjuntamos evento
 let btnMostrarCatalogo = document.getElementById("verCatalogo");

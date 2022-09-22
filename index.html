@@ -105,7 +105,7 @@
     ></path>
   </svg>
 </section>
-<section class="download">
+<section class="download ">
 
   <div class="container">
     <div class="col">
@@ -115,21 +115,21 @@
   </div>
   
   <br>
-  <div class="container">
+  <div class="container ">
     <div class="row">
       <div class="col">
         <h3 class="download__title"> Planes disponibles </h3>
         <br>
-        <ul id="listaPlanes">
-          <li class="planes">Plan Responsabilidad Civil</li>
-          <li class="planes">Plan Todo Total</li>
-          <li class="planes">Plan Todo Riesgo</li>
-        </ul>
+        <div>
+          <ul id="listaPlanes">
+            <li class="planes">Plan Responsabilidad Civil</li>
+            <li class="planes">Plan Todo Total</li>
+            <li class="planes">Plan Todo Riesgo</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-  <br>
-  <br>
   <br>
   <br>
   <br>
@@ -137,7 +137,7 @@
     <div class="row">
       <div class="col">
         <h3 class="download__title"> Ahorro Garantizado </h3>
-        <p class ="descuento">
+        <p class ="descuento text-center">
           Podes ahorrar entre un 10% y un 30% de lo que pagas actualmente. <strong> Cotiza con nosotros! </strong>
         </p>
       </div>
@@ -156,17 +156,11 @@
     </div> 
   </div>
 
-
-<div>
-  <div id="productos" class="productosEstilos"></div>
-</div>
-
-  
+ 
 
 <br>
 <br>
 <br>
-
 
 
 <div class="container">
@@ -175,24 +169,28 @@
   <form>
     <label for="titulo">Ingrese el nombre de la Cobertura que desea contrarar: </label><br>
     <input type="text" id="tituloInput" name="titulo"><br>
-    <label for="autor">Ingrese metros cuadrados de su comercio: </label><br>
-    <input type="text" id="autorInput" name="autor"><br>
+    <label for="ramo">Ingrese metros cuadrados de su comercio: </label><br>
+    <input type="text" id="ramoInput" name="ramo"><br>
     <label for="precio">Ingrese el capital asegurado que desea cubrir: </label><br>
     <input type="text" id="precioInput" name="precio"><br>
     <br>
   </form>
-    <button id="guardarLibroBtn">Cotizar</button>
+    <button id="guardarSeguroBtn">Cotizar</button>
     <br>
     <br>
-    <button id="verCatalogo">Ver Beneficios</button>
+    <button id="verCatalogo">Mostrar Coberturas</button>
     <br>
     <br>
-    <button id="ocultarCatalogo">Ocultar Beneficios</button>
+    <button id="ocultarCatalogo">Ocultar Coberturas</button>
   </div>    
 </div>
 
-  <br>
-  <br>
+ 
+  <div class="container">
+    <div class="intro-section2">
+      <div id="productos" class="productosEstilos"></div>
+    </div>
+  </div>
   <br>
   <br>
 
