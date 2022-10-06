@@ -4,261 +4,618 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Proyecto Coder House</title>
+    <title> Proyecto Coder House </title>
     
+    <!-- CSS -->
+      <link 
+        rel="stylesheet" 
+        type="text/css" 
+        href="style.css" />
+
+    <!--Toastify-->
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+      />
+
+    <!-- Iconos-->
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+        crossorigin="anonymous"
+      />
+
     <!--GOOGLE FONTS-->
       <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,600&display=swap"
-      rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,600&display=swap"
+        rel="stylesheet"
       />
+
     <!--ANIMATE CSS-->
       <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       />
-    <!--FAVICON-->
-      <link rel="shortcut icon" href="/Imagenes/ico.png" type="image/x-icon" />
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+    <!--FAVICON-->
+      <link 
+        rel="shortcut icon" 
+        href="/Imagenes/ico.png" 
+        type="image/x-icon" />
+
+    <!--Bootstrap-->
+      <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+        crossorigin="anonymous">
+    
+    <!-- Required meta tags -->
+      <meta 
+        charset="utf-8">
+      <meta 
+        name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Primary metatags -->
+      <title>Cotizador Online — Simulá una cotización</title>
+      <meta 
+        name="description" 
+        content="App simulador de un cotizador de seguros para comercios. Proyecto final para el curso JavaScript de Coderhouse.">
+      <meta 
+        name="keywords" 
+        content="JavaScript, App JS Puro, Seguro Online, Cotizador de seguros, seguros, seguro integral de comercio, JS Cotizador, Javascript course, Insurance, Comerce Insurance, Coderhouse">
+      <meta 
+        name="author" 
+        content="Jaime Valdés"/>
   </head>
 
-<body>    
-<!--HEADER-->
-<header>
-<!--NAV BAR-->
-<div class="container">
-  <div class="row">
-    <button class="nav-toggle" aria-label="abrir navegacion">
-      <span class="hamburger"></span>
-    </button>
-  
-    <nav class="nav">
-      <ul class="nav__list nav__list--primary">
-        <li class="nav__item">
-          <a class="nav__link" href="index.html">HOME</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="coberturas.html">COBERTURAS</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="faq.html">FAQ</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="nosotros.html">NOSOTROS</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="ayuda.html">AYUDA</a>
-        </li>
-        
-      </ul>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <button class="nav__l">
-          DARK MODE <span><i class="fas fa-download"></i></span>
+  <body>    
+    <!--HEADER-->
+    <header>
+      <!--NAV BAR-->
+      <div class="container">
+        <div class="row">
+          <button class="nav-toggle" aria-label="abrir navegacion">
+            <span class="hamburger"></span>
           </button>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
-</header>
-<main>
-<section id="home" class="intro-section">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1   class="display-2">
-          <span  class="display-2--intro">    INSURANCE TECH
-          </span>
-          <br>
-          <span class="display-2--description texto">
-            <brstrong>Quienes Somos</brstrong>
-            <br>
-            <br>
-              <p id="texto">Somos una organización joven integrada por profesionales con amplia experiencia en seguros así como en la evaluación y administración de riesgos.</p>
-            <br>
-              <p id="texto">Nuestro propósito es comprender las necesidades de nuestros clientes y brindarles soluciones innovadoras.</p>
-          </span>
-          
-        </h1>
-        <button class="nav__link--button">
-          COTIZAR AHORA! <span><i class="fas fa-cloud-download-alt"></i></span>
-        </button>
-      </div>
-      <div class="col">
-        <div class="img-box">
-          <img
-            src="/Imagenes/comerciospymes2000x129920160627041303024.jpg"
-            alt="Personas dentro de un comercio"
-          />
+          <nav class="nav">
+            <ul class="nav__list nav__list--primary">
+              <li class="nav__item">
+                <a class="nav__link" href="index.html"> HOME </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="coberturas.html"> COBERTURAS </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="faq.html"> FAQ </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="nosotros.html"> NOSOTROS </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="ayuda.html"> AYUDA </a>
+              </li>
+            </ul>
+            <BR>
+            </BR>
+            <div class="container">
+              <div class="row" >
+                <div class="col-2">
+                  <button id="botonDarkMode" class="btn btn-dark"> <strong> Dark </strong></button>
+                </div>
+                <div class="col-2">
+                  <button id="botonLightMode" class="btn btn-light"><strong> Light </strong></button>
+                </div>
+              </div>
+            </div>
+          </nav>
         </div>
       </div>
-    </div>
-  </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path
-      fill="#fff"
-      fill-opacity="1"
-      d="M0,96L48,117.3C96,139,192,181,288,176C384,171,480,117,576,122.7C672,128,768,192,864,197.3C960,203,1056,149,1152,144C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-    ></path>
-  </svg>
-</section>
-<section class="download ">
+    </header>
 
-  <div class="container">
-    <div class="col">
-      <H2 id ="titulo" class="download__title"> Integral de Comercio</H2>
-      <br>
-    <div>
-  </div>
-  
-  <br>
-  <div class="container ">
-    <div class="row">
-      <div class="col">
-        <h3 class="download__title"> Planes disponibles </h3>
+    <main>
+      <section id="home" class="intro-section">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1   class="display-2">
+                <span  class="display-2--intro">
+                  INSURANCE TECH
+                </span>
+              </h1>
+              <br>
+              <span class="display-2--description texto">
+                <br>
+                  <strong>Quienes Somos</strong>
+                </br>
+                <br>
+                <br>
+                <p id="texto">Somos una organización joven integrada por profesionales con amplia experiencia en seguros así como en la evaluación y administración de riesgos.</p>
+                <br>
+                <p id="texto">Nuestro propósito es comprender las necesidades de nuestros clientes y brindarles soluciones innovadoras.</p>
+              </span>
+              <a href="#cotizador">
+                <button class="nav__link--button" >
+                  COTIZAR AHORA!
+                  <span>
+                    <i class="fas fa-cloud-download-alt"  ></i>
+                  </span>
+                </button>
+              </a>
+            </div>
+            <div class="col">
+              <div class="img-box">
+                <img src="/Imagenes/proteccion-auto.png" alt="Personas dentro de un comercio"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#fff"  fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,176C384,171,480,117,576,122.7C672,128,768,192,864,197.3C960,203,1056,149,1152,144C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </section>
+      <section class="download ">
         <br>
+        <div class="container">
+          <div class="col">
+            <H2 id ="titulo" class="download__title">Cobertura Automotor</H2>
+            <br>
+          <div>
+        </div>
+        <br>
+        <div class="container ">
+          <div class="row">
+            <div class="col">
+              <h3 class="download__title">Planes disponibles</h3>
+              <br>
+              <div>
+                <ul id="listaPlanes">
+                  <li class="planes">Responsabilidad Civil</li>
+                  <li class="planes">Tercero Completo</li>
+                  <li class="planes">Todo Riesgo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="download__title">Ahorro Garantizado</h3>
+              <p class ="descuento text-center">Podes ahorrar entre un 10% y un 35% de lo que pagas actualmente.<strong> Cotiza con nosotros!</strong> </p>
+            </div>
+          </div>
+        </div>
         <div>
-          <ul id="listaPlanes">
-            <li class="planes">Plan Responsabilidad Civil</li>
-            <li class="planes">Plan Todo Total</li>
-            <li class="planes">Plan Todo Riesgo</li>
-          </ul>
+          <!-- Card Bootstrap-->
+          <div id="1" class="card" style="width: 50rem;">
+            <img class="card-img-top" style="height: 250px;"src="/Imagenes/Baner-Automotor-1.jpg" alt="Seguro de Responsabilidad Civil">
+            <div class="card-body">
+              <h4 class="card-title">Principales Coberturas para Vehículos</h4>
+              <p> Nuestros seguros ofrecen una combinación de coberturas especialmente diseñadas para tu tranquilidad, son hechas a medidas para tu vehículo.</p>
+            </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+          </div> 
+        </div>
+        <br>
+        <br>
+        <div class="main-container m-auto p-md-5 py-4 px-2 w-md-75 w-100" id="cotizador">
+          <div class="d-flex bg-white h-50 w-100 rounded">
+            <div class="accordion w-100" id="formMain">
+              <div class="accordion-item" >
+                <h2 class="accordion-header" id="headingClient">
+                  <button id="btn-collapseClient" class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseClient" aria-expanded="true" aria-controls="collapseClient">
+                      COTIZADOR AUTOMOTOR
+                  </button>
+                </h2>
+              <div id="collapseClient" class="accordion-collapse collapse show" aria-labelledby="headingClient" data-bs-parent="#formMain">
+              <div class="accordion-body">
+              
+            <div id="alert-collapseClient"></div>
+            <label for="clientName" class="form-label">Ingresa su nombre y apellido</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+              <input type="text" autocomplete="off" id="clientName" name="clientName" class="form-control"
+                placeholder="Jorge" aria-label="Nombre del cliente">
+            </div>
+            <label for="clientAge" class="form-label">Ingresa tu edad</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fa-solid fa-calendar"></i></span>
+              <input type="number" min="17" max="85" id="clientAge" name="clientAge" class="form-control" placeholder="30"
+                aria-label="Edad del cliente" disabled>
+            </div>
+            <div class="d-flex flex-wrap align-items-stretch justify-content-between">
+              <div class="col-sm-auto col-12 text-center mb-sm-0 mb-3">
+                <button class="btn w-100 btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHistory" aria-controls="offcanvasHistory">
+                  Ver historial
+                </button>
+              </div>
+              <div class="col-sm-auto col-12 text-center">
+                <button id='btn-next-client' type="button" class="btn w-100 btn-primary" onclick="nextStep(validateClientData(), 'collapseVehicle','collapseClient',fillBrandSelect);" disabled>Continuar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingVehicle">
+          <button id="btn-collapseVehicle" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseVehicle" aria-expanded="false" aria-controls="collapseVehicle" disabled>
+            DATOS DEL VEHÍCULO
+          </button>
+        </h2>
+        <div id="collapseVehicle" class="accordion-collapse collapse" aria-labelledby="headingVehicle"
+          data-bs-parent="#formMain">
+          <div class="accordion-body">
+            <div id="alert-collapseVehicle"></div>
+            <label for="vehicleBrand" class="form-label">Ingrese la Marca</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fas fa-car"></i></span>
+              <div id="brandSelect" class="customSelect form-control">
+                <input id="vehicleBrand" class="form-control" type="text" autocomplete="off" placeholder='Seleccione o escriba la marca'>
+                <div class="spinner-border" role="status" hidden>
+                  <span class="visually-hidden">Cargando...</span>
+                </div>
+                <div class="arrow arrow-hidden"></div>
+                <div class='customSelect-items' hidden>
+                </div>
+              </div>
+            </div>
+            <label for="vehicleYear" class="form-label">Ingrese el año del vehículo</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fas fa-car"></i></span>
+              <div id="yearSelect" class="customSelect form-control">
+                <input id="vehicleYear" class="form-control" type="text" autocomplete="off" placeholder='Seleccione un año'>
+                <div class="spinner-border" role="status" hidden>
+                  <span class="visually-hidden">Cargando...</span>
+                </div>
+                <div class="arrow arrow-hidden"></div>
+                <div class='customSelect-items' hidden>
+                </div>
+              </div>
+            </div>
+            <label for="vehicleModel" class="form-label">Ingrese el modelo</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fas fa-car-side"></i></span>
+              <div id="modelSelect" class="customSelect form-control">
+                <input id="vehicleModel" class="form-control" type="text" autocomplete="off" placeholder='Seleccione o escriba la marca'>
+                <div class="spinner-border" role="status" hidden>
+                  <span class="visually-hidden">Cargando...</span>
+                </div>
+                <div class="arrow arrow-hidden">
+                </div>
+                <div class='customSelect-items' hidden>
+                </div>
+              </div>
+            </div>
+            <label for="vehicleAmount" class="form-label">Suma Asegurada</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+              <input type="text" id="vehicleAmount" name="vehicleAmount" class="form-control" placeholder="1500000" aria-label="Suma asegurada del vehículo" disabled>
+            </div>
+            <div id="alert-vehicleAmount">
+            </div>
+            <label for="vehicleAdjustment" class="form-label">Clásusula de Ajuste</label>
+            <select id="vehicleAdjustment" class="form-select mb-3" aria-label="Ajuste automático">
+              <option value="0.15">15%</option>
+              <option value="0.20">20%</option>
+              <option value="0.30">30%</option>
+            </select>
+            <label for="vehicleUsage" class="form-label">Tipo de Uso</label>
+            <select id="vehicleUsage" class="form-select mb-3" aria-label="Tipo de uso">
+              <option value="1">Particular</option>
+              <option value="2">Comercial</option>
+            </select>
+            <p class="form-label">Accesorios</p>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="1" id="vehicleGNC">
+              <label class="form-check-label" for="vehicleGNC">
+                GNC
+              </label>
+            </div>
+            <p class="form-label">Seleccioná las coberturas:</p>
+            <div class="form-check m-auto mb-3">
+              <input class="chkCoverage form-check-input" type="checkbox" id="checkRC" checked="checked" disabled>
+              <label class="form-check-label" for="checkRC">
+                Responsabilidad Civil
+              </label>
+            </div>
+            <div class="form-check m-auto mb-3">
+              <input class="chkCoverage form-check-input" type="checkbox" id="checkTC" disabled>
+              <label class="form-check-label" for="checkTC">
+                Tercero Completo
+              </label>
+            </div>
+            <div class="form-check m-auto mb-3">
+              <input class="chkCoverage form-check-input" type="checkbox" id="checkTR" disabled>
+              <label class="form-check-label" for="checkTR">
+                Todo Riesgo
+              </label>
+            </div>
+            <div class="d-flex flex-wrap align-items-stretch justify-content-between">
+              <div class="col-sm-auto col-12 text-center mb-sm-0 mb-3">
+                <button type="button" class="btn w-100 btn-primary" onclick="previousStep('collapseClient', 'collapseVehicle');">Volver</button>
+              </div>
+              <div class="col-sm-auto col-12 text-center">
+                <button id="btn-next-vehicle" type="button" class="btn w-100 btn-primary" onclick="nextStep(validateVehicleData(), 'collapsePayment','collapseVehicle');" disabled>Continuar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingPayment">
+          <button id="btn-collapsePayment" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePayment" aria-expanded="false" aria-controls="collapsePayment" disabled> FORMA DE PAGO </button>
+        </h2>
+        <div id="collapsePayment" class="accordion-collapse collapse" aria-labelledby="headingPayment" data-bs-parent="#formMain">
+          <div class="accordion-body">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 g-5 text-center">
+              <div class="col">
+                <div class="card h-100 mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Efectivo</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">6 Cuotas</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Pagás el Premio en 6 cuotas sin intereses</li>
+                      <br>
+                      <li>Rapipago/Pagofácil</li>
+                      <li>MercadoPago</li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary" onclick="quoteAndShow(1);">Cotizar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Efectivo</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">1 Cuota</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Pagás el Premio en 1 cuota</li>
+                      <br>
+                      <li>Rapipago/Pagofácil</li>
+                      <li>MercadoPago</li>   
+                      <br>
+                      <li><strong>15% de Descuento</strong></li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <button type="button" class="w-100 btn btn-lg btn-primary" onclick="quoteAndShow(2);">Cotizar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 mb-4 rounded-3 shadow-sm border-primary">
+                  <div class="card-header py-3 text-white bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Débito Automático</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">6 cuotas</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Pagás el Premio de forma automática, a través de tu:</li>
+                      <br>
+                      <li>CBU/CVU</li>
+                      <li>Tarjeta de crédito</li>
+                      <BR>
+                      <li><strong>5% de Descuento</strong></li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <button type="button" class="w-100 btn btn-lg btn-primary" onclick="quoteAndShow(3);">Cotizar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap align-items-stretch justify-content-between">
+              <div class="col-sm-auto col-12 text-center mb-sm-0 mb-3">
+                <button type="button" class="btn w-100 btn-primary" onclick="previousStep('collapseVehicle', 'collapsePayment');">Volver</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingQuotation">
+          <button id="btn-collapseQuotation" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuotation" aria-expanded="false" aria-controls="collapseQuotation" disabled>
+            RESUMEN DE COTIZACIÓN
+          </button>
+        </h2>
+        <div id="collapseQuotation" class="accordion-collapse collapse" aria-labelledby="headingQuotation" data-bs-parent="#formMain">
+          <div class="accordion-body">
+            <div id="quotation-data" class="d-flex flex-sm-nowrap flex-wrap g-2 justify-content-center align-items-stretch m-1">
+              <div class="col-sm-4 col-12 placeholder-glow border rounded-start m-1 p-3">
+                <p class="m-0 placeholder-glow">
+                  <span class="placeholder col-3"></span>
+                  <span class="placeholder col-8"></span>
+                  <span class="placeholder col-3"></span>
+                  <span class="placeholder col-8"></span>
+                  <span class="placeholder col-2"></span>
+                  <span class="placeholder col-9"></span>
+                </p>
+              </div>
+              <div class="col-sm-4 col-12 border rounded-end text-rigth m-1 p-3">
+                <p class="m-0 placeholder-glow">
+                  <span class="placeholder col-6"></span>
+                  <span class="placeholder col-5"></span>
+                  <span class="placeholder col-3"></span>
+                  <span class="placeholder col-8"></span>
+                  <span class="placeholder col-2"></span>
+                  <span class="placeholder col-9"></span>
+                </p>
+              </div>
+              <div class="col-sm-4 col-12 border rounded-end text-rigth m-1 p-3">
+                <p class="m-0 placeholder-glow">
+                  <span class="placeholder col-6"></span>
+                  <span class="placeholder col-5"></span>
+                  <span class="placeholder col-3"></span>
+                  <span class="placeholder col-8"></span>
+                  <span class="placeholder col-2"></span>
+                  <span class="placeholder col-9"></span>
+                </p>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-stretch">
+              <div id="quotation-list" class="d-flex flex-column align-items-stretch">
+                <div class="d-flex align-items-center border-top border-bottom border-dark p-2">
+                  <div class="col-sm-8 col-12">
+                    <p class="m-0 placeholder-glow">
+                      <span class="placeholder col-4"></span>
+                      <span class="placeholder col-10"></span>
+                    </p>
+                  </div>
+                  <div class="col-sm-4 col-12 fw-bold text-end">
+                    <p class="m-0 placeholder-glow">
+                      <span class="placeholder col-4"></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center border-top border-bottom border-dark p-2">
+                  <div class="ol-sm-8 col-12">
+                    <p class="m-0 placeholder-glow">
+                      <span class="placeholder col-4"></span>
+                      <span class="placeholder col-10"></span>
+                    </p>
+                  </div>
+                  <div class="col-sm-4 col-12 fw-bold text-end">
+                    <p class="m-0 placeholder-glow">
+                      <span class="placeholder col-4"></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center border-top border-bottom border-dark p-2">
+                  <div class="ol-sm-8 col-12">
+                    <p class="m-0 placeholder-glow">
+                      <span class="placeholder col-4"></span>
+                      <span class="placeholder col-10"></span>
+                    </p>
+                  </div>
+                  <div class="col-sm-4 col-12 fw-bold text-end">
+                    <p class="m-0 placeholder-glow">
+                      <span class="placeholder col-4"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap align-items-stretch justify-content-between mt-3">
+              <div class="col-sm-auto col-12 text-center mb-sm-0 mb-3">
+                <button type="button" class="m-1 w-100 btn btn-primary" onclick="previousStep('collapsePayment', 'collapseQuotation');">Volver</button>
+              </div>
+              <div class="col-sm-auto col-12 text-center mb-sm-0 mb-3">
+                <button id="btn-offcanvasHistory" class="m-1 w-100 btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHistory" aria-controls="offcanvasHistory"> Ver historial </button>
+              </div>
+              <div class="col-sm-auto col-12 text-center mb-sm-0 mb-3">
+                <button type="button" id="btn-saveQuotation" class="m-1 w-100 btn btn-primary" onclick="saveQuotation();">Guardar</button>
+              </div>
+              <div class="col-sm-auto col-12 text-center">
+                <button type="button" id="btn-newQuotation" class="m-1 w-100 btn btn-primary" onclick="createNewQuotation();">Nueva</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <br>
-  <br>
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h3 class="download__title"> Ahorro Garantizado </h3>
-        <p class ="descuento text-center">
-          Podes ahorrar entre un 10% y un 30% de lo que pagas actualmente. <strong> Cotiza con nosotros! </strong>
-        </p>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasHistory" aria-labelledby="offcanvasHistoryLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasHistoryLabel">Historial</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="offcanvas-history" class="d-flex flex-column justify-content-between">
+        <div class="p-2 mb-1 fw-bold">Cotizaciones recientes</div>
+        <div id="offcanvas-history-list" class="list-group mb-2">
+        </div>
+        <div id="offcanvas-saved" class="d-flex flex-column justify-content-between">
+          <div class="p-2 mb-1 fw-bold">Cotizaciones guardadas</div>
+          <div id="offcanvas-saved-list" class="list-group mb-2">
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-  <div>
-  <!-- Card Bootstrap-->
-    <div id="1" class="card" style="width: 50rem;">
-        <img class="card-img-top" style="height: 250px;"src="/Imagenes/seguro_de_comercio.png" alt="Seguro de Responsabilidad Civil">
-        <div class="card-body">
-            <h4 class="card-title">Principales Coberturas del Integral de Comercio</h4>
-            <p>Este seguro ofrece una combinación de coberturas que garantizan que tu negocio siga funcionando más allá de cualquier siniestro que te afecte económicamente. La amplia protección de este seguro resguarda tu comercio y te brinda cobertura por incendio, robo, responsabilidad civil a linderos, responsabilidad civil comprensiva, seguro técnico (incluyendo equipos electrónicos) y cristales.
-            </p>
-        </div>
-    </div> 
-  </div>
-
- 
-
-<br>
-<br>
-<br>
-
-
-<div class="container">
-  <div class="intro-section2">
-  <h2>PRUEBA NUESTRO CORIZADOR</h2>
-  <form>
-    <label for="titulo">Ingrese el nombre de la Cobertura que desea contrarar: </label><br>
-    <input type="text" id="tituloInput" name="titulo"><br>
-    <label for="ramo">Ingrese metros cuadrados de su comercio: </label><br>
-    <input type="text" id="ramoInput" name="ramo"><br>
-    <label for="precio">Ingrese el capital asegurado que desea cubrir: </label><br>
-    <input type="text" id="precioInput" name="precio"><br>
-    <br>
-  </form>
-    <button id="guardarSeguroBtn">Cotizar</button>
-    <br>
-    <br>
-    <button id="verCatalogo">Mostrar Coberturas</button>
-    <br>
-    <br>
-    <button id="ocultarCatalogo">Ocultar Coberturas</button>
-  </div>    
 </div>
 
- 
-  <div class="container">
-    <div class="intro-section2">
-      <div id="productos" class="productosEstilos"></div>
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col">
+          <div class="download__logo-box">
+            <h4 id="subtituloServicio" class="download__title"> Atención las 24 Hrs</h4>
+            <a href="" target="blank"><img src="/Imagenes/Diseño sin título.png" alt="Call Center" class="imagen"/></a>
+          </div>
+        </div>
+          <div class="col">
+            <div class="download__logo-box">
+              <h4 id="subtituloServicio" class="download__title"> Costo-Beneficio  </h4>
+              <a href="" target="blank">
+              <img src="/Imagenes/Diseño sin título (1).png" alt="Inversión" class="imagen"/></a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="download__logo-box">
+              <h4 id="subtituloServicio" class="download__title"> Servicios de Urgencia! </h4>
+              <a href="" target="blank"><img src="/Imagenes/Diseño sin título (2).png" alt="Descargar desde Windows Store" class="imagen"/></a>
+            </div>
+          </div>
+        </div>
     </div>
-  </div>
-  <br>
-  <br>
-
-  <div class="container">
-    <br>
-    <div class="row">
-      <div class="col">
-        <div class="download__logo-box">
-          <h4 id="subtituloServicio" class="download__title"> Atención las 24 Hrs</h4>
-          <a
-            href=""
-            target="blank"
-            ><img
-              src="/Imagenes/Diseño sin título.png"
-              alt="Call Center"
-              class="imagen"
-          /></a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="download__logo-box">
-          <h4 id="subtituloServicio" class="download__title"> Costo-Beneficio  </h4>
-
-          <a href="" target="blank"
-            ><img
-              src="/Imagenes/Diseño sin título (1).png"
-              alt="Inversión"
-              class="imagen"
-
-          /></a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="download__logo-box">
-          <h4 id="subtituloServicio" class="download__title"> Servicios de Urgencia! </h4>
-
-          <a
-            href=""
-            target="blank"
-            ><img
-              src="/Imagenes/Diseño sin título (2).png"
-              alt="Descargar desde Windows Store"
-              class="imagen"
-
-          /></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 </main>
-<!--COMIENZA EL FOOTER-->
-<footer class="footer">
-<div class="footer-sm">
- 
-</div>
-<div class="footer-bottom">
-  <div class="container">
-    <div class="row footer-bottom__copyright">
-      <div class="col">
-        &copy; Copyright 2022  |  <a href="https://github.com/superjai3">github.com/superjai3</a>  |  Creada por Jaime Valdés
+  <!--COMIENZA EL FOOTER-->
+  <footer class="footer">
+    <div class="footer-sm">
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row footer-bottom__copyright">
+          <div class="col">
+            &copy; Copyright 2022  |  <a href="https://github.com/superjai3">github.com/superjai3</a>  |  Creada por Jaime Valdés
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </footer>
 
 
+    <!--BS-->
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+    ></script>
 
-<script src="desafio1.js"></script>
+    <!--Sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--Luxon-->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/66003e86ce.js" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <script src="src/utils.js" defer></script>
+    <script src="src/renderhtml.js" defer></script>
+    <script src="src/storage.js" defer></script>
+    <script src="src/validations.js" defer></script>
+    <script src="src/quoter.js" defer></script>
+    <script src="src/customSelect.js" defer></script>
+    <script src="src/main.js" defer></script>
+    <script src="darkMode.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
+
+
